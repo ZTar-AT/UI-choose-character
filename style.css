@@ -1,0 +1,313 @@
+@font-face {
+    font-family: "Cloud";
+    src: url(fonts/Cloud-Bold.ttf) format('truetype');
+    /* กำหนดขนาดทั่วไปเป็น Cloud-Bold หรือตัวหน่า */
+
+}
+
+:root {
+    /* ฟอนต์ */
+
+    --font: "Cloud", sans-serif;
+    --y: 50px
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+.main{
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    justify-items: center;
+}
+
+body {
+
+    position: relative;
+    justify-items: center;
+    display: grid;
+    width: 100%;
+    height: 100%;
+    background-color: #0f2130;
+}
+
+.boxcharacter {
+    width: 50vw;
+    height: 100%;
+    position: absolute;
+    bottom: 0;
+    background: url(image/character/MICHAEL.png) no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-size: 90%;
+    background-position: center 0%;
+  
+
+}
+.tegnamecharacter{
+   
+    font-family: var(--font);
+    font-size: 6vh;
+
+    position: absolute;
+    color: #e9eeb4;
+    right: 1vw;
+    top: 7vh;
+    text-align: right;
+}
+.btnLock{
+    padding: 0.5vw 1.5vw 0.5vw 1.5vw;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    white-space: nowrap;
+
+    font-family: var(--font);
+    font-size: 2vw;
+    position: absolute;
+    color: white;
+    bottom: 5vh;
+    background-color: #0196f7;
+    text-align: center;
+    border-radius: 10px;
+    left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.container_left {
+    position: absolute;
+    top: 12vh;
+   
+    left: 0;
+    width: 25vw;
+    height: 70vh;
+    display: grid;
+    justify-content: center;
+    grid-template-rows: auto auto auto auto auto;
+    column-gap: 1vh;
+}
+
+.boxtime{
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    font-family: var(--font);
+    font-size: 4vh;
+    top: 0;
+    color: #a7c6d2;
+    position: fixed;
+    width: 8vw;
+    text-align: center;
+    padding: 1vh 0 1vh 0;
+    background-color: #44505c;
+    margin-left: 3vw;
+
+}
+
+.boxplayer{
+    overflow: hidden;
+    border-radius: 10px;
+    margin-left: 3vw;
+    width: 22vw;
+    height: 13vh;
+
+    background-color: #44505c;
+    display: grid;
+    justify-content: left;
+    grid-template-columns: 7vw 12vw 3vw;
+    
+}
+
+
+.img_choosecharacter {
+    width: 7vw;
+    height: 13vh;
+    background: url(image/character/MICHAEL.png) no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-position: center 10%;
+    border-radius: 12px;
+    background-color: #687078;
+}
+
+.tegname{
+    font-family: var(--font);
+    font-size: 3vh;
+    width: 100%;
+    padding-top: 3vh;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: white;
+   
+}
+.tegname:nth-child(2){
+    font-size: 2vh;
+    padding-top: 0.5vh;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    color: #8cd9da;
+}
+
+.grid_rows2{
+    width: 11vw;
+    height: 15vh;
+    padding-left: 0.5vw;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    
+    display: grid;
+    justify-content: left;
+    grid-template-rows: 50% 50%;
+}
+.container_left > .boxplayer:nth-child(1) >.grid_rows2 >.tegname:nth-child(1){
+    color: #dbe0ad;
+}
+
+.null_choosecharacter {
+    width: 7vw;
+    height: 13vh;
+    border-radius: 12px;
+    background: url(image/icon/null.png) no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-position: center 50%;
+    background-size: 60%;
+    background-color: #687078;
+}
+
+
+.iconmic_off,.iconmic_on{
+    margin-top: 5vh;
+    width: 3vh;
+    height: 3vh;
+    background: url(image/icon/sound_off.png) no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-position: center 10%;
+}
+.iconmic_on{
+
+    background: url(image/icon/sound_on.png) no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-position: center 10%;
+}
+
+.menutop {
+    background-color: #0b1623;
+   
+    right: 0;
+    width: 19vw;
+    height: 10vh;
+    display: grid;
+    justify-content: center;
+    grid-template-columns: 50% 50% ;
+    column-gap: 1vh;
+   
+}
+
+.boxname {
+    margin-top: 2vh;
+    margin-left: 15%;
+    width: 80%;
+    height: 5vh;
+    background-color: #091019;
+    border-radius: 12px;
+    box-shadow: 0px 0px 10px 10px #083e65;
+    font-family: var(--font);
+    font-size: 2.8vh;
+    text-align: center;
+    color: #76797d;
+    padding-top: 0.6vh;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    cursor: pointer;
+
+  }
+  .boxname:nth-child(2){
+    margin-left: 0%;
+  }
+  .boxname:hover{
+    color: white;
+  }
+
+  .container_right {
+    background-color: #0b1623;
+    position: absolute;
+    right: 0;
+    width: 19vw;
+    height: 100vh;
+    display: grid;
+    grid-template-rows: 10vh auto ;
+}
+
+.listboxcard {
+    background-color: #0b1623;
+   
+    right: 0;
+    width: 19vw;
+
+    display: grid;
+    justify-content: center;
+    grid-template-columns: 50% 50% ;
+    grid-auto-rows: 15vh;
+    column-gap: 1vh;
+   
+}
+
+.boxCS,.boxCS_on{
+    width: 80%;
+    height: 90%;
+    border-radius: 12px;
+  margin-top: 2vh;
+    margin-left: 15%;
+    background: url(image/character/MICHAEL.png) no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-position: center 0%;
+    background-color: #414850;
+    filter: contrast(0.5);
+  
+}
+.boxCS:nth-child(even){
+    margin-left: 0%;
+}
+
+.boxCS:hover{
+    filter: contrast(1);
+    background-color: #083e65;
+}
+
+.boxCS_on::before{
+    width: 6vh;
+    height: 6vh;
+content: '';
+background-color: #ffffffb4;
+position: absolute;
+background: url(image/icon/cross.png) no-repeat;
+-webkit-background-size: cover;
+-moz-background-size: cover;
+-o-background-size: cover;
+background-size: cover;
+background-position: center 0%;
+
+top: 50%;
+left: 50%;
+
+transform: translate(-50%, -50%);
+}
